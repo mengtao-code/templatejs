@@ -1,4 +1,4 @@
-const sum = (a: number, b: number)=> {
+const sum = (a: number, b: number) => {
     return a + b
 }
-export default sum;
+export default sum
