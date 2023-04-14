@@ -1,19 +1,15 @@
-import * as path from 'path'
-import * as webpack from 'webpack'
-// in case you run into any typescript error when configuring `devServer`
-import 'webpack-dev-server'
+/* eslint-disable */
+const path = require('path')
 
-const config: webpack.Configuration = {
+module.exports = {
     entry: './src/index.ts',
     mode: 'development',
     module: {
-        rules: [
-            {
-                test: /\.tsx?$/,
-                use: 'ts-loader',
-                exclude: /node_modules/,
-            },
-        ],
+        rules: [{
+            test: /\.(ts|js)x?$/,
+            exclude: /node_modules/,
+            loader: 'babel-loader',
+        }],
     },
     resolve: {
         extensions: ['.tsx', '.ts', '.js', '.jsx'],
@@ -34,5 +30,3 @@ const config: webpack.Configuration = {
         port: 9000,
     },
 }
-
-export default config
