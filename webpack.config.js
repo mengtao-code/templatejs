@@ -23,12 +23,14 @@ module.exports = {
     },
     context: path.resolve(__dirname, './'),
     output: {
+        publicPath: "/",
         path: path.resolve(__dirname, 'public'),
         filename: 'bundle/bundle.js',
         chunkFilename: '[name].js',
     },
     devtool: 'inline-source-map',
     devServer: {
+        historyApiFallback: true,
         static: {
             directory: path.resolve(__dirname, './public'),
         },
