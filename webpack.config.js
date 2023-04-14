@@ -5,11 +5,17 @@ module.exports = {
     entry: './src/index.ts',
     mode: 'development',
     module: {
-        rules: [{
-            test: /\.(ts|js)x?$/,
-            exclude: /node_modules/,
-            loader: 'babel-loader',
-        }],
+        rules: [
+            {
+                test: /\.(ts|js)x?$/,
+                exclude: /node_modules/,
+                loader: 'babel-loader',
+            },
+            {
+                test: /\.css$/i,
+                use: ["style-loader", "css-loader"],
+            },
+        ],
     },
     resolve: {
         extensions: ['.tsx', '.ts', '.js', '.jsx'],
