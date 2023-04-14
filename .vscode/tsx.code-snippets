@@ -9,13 +9,15 @@
           "  $1",
           "}",
           "",
-          "export const ${TM_FILENAME_BASE}: FC<${TM_FILENAME_BASE}Props> = ({ $2 }) => {",
+          "const ${TM_FILENAME_BASE}: FC<${TM_FILENAME_BASE}Props> = ({ $2 }) => {",
           "  return (",
           "    <div>",
           "     ${3:$TM_FILENAME_BASE}",
           "    </div>",
           "  )",
           "}",
+          "",
+          "export default ${TM_FILENAME_BASE}"
         ],
       }
 }
