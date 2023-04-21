@@ -1,0 +1,7 @@
+{
+    "typescript.preferences.quoteStyle":"single",
+    "typescript.format.semicolons": "remove",
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      }
+}
