@@ -7,4 +7,9 @@ module.exports = {
         browser: true,
         node: true,
     },
+    rules: {
+        semi: ['error', 'never'],
+        'comma-dangle': ['error', 'never'],
+        quotes: ['error', 'single']
+    }
 }
