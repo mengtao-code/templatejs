@@ -5,7 +5,7 @@ module.exports = {
     "@babel/react",
     "jest"
   ],
-	"plugins": [
+  "plugins": [
     "@babel/proposal-class-properties",
     "@babel/proposal-object-rest-spread"
 ]
