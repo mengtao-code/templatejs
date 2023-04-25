@@ -10,6 +10,7 @@ module.exports = {
     rules: {
         semi: ['error', 'never'],
         'comma-dangle': ['error', 'never'],
-        quotes: ['error', 'single']
+        quotes: ['error', 'single'],
+        'jsx-quotes': ['warn', 'prefer-single']
     }
 }

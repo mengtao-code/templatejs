@@ -1,0 +1,25 @@
+{
+  "Typescript React component": {
+    "scope": "react component",
+    "prefix": "rc",
+    "body": [
+      "import React, { FC } from 'react'",
+      "import { Text } from 'Dependency'",
+      "",
+      "interface ${TM_FILENAME_BASE}Props {",
+      "  $1",
+      "}",
+      "",
+      "const ${TM_FILENAME_BASE}: FC<${TM_FILENAME_BASE}Props> = ({ $2 }) => {",
+      "  // todo",
+      "  return (",
+      "    <Text>",
+      "     ${3:$TM_FILENAME_BASE}",
+      "    </Text>",
+      "  )",
+      "}",
+      "",
+      "export default ${TM_FILENAME_BASE}"
+    ]
+  }
+}
