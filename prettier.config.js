@@ -9,5 +9,5 @@ module.exports = {
   jsxSingleQuote: true,
   bracketSpacing: true,
   parser: 'typescript',
-  printWidth: 160,
-};
+  printWidth: 160
+}
