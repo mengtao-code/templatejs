@@ -42,6 +42,9 @@
     "webpack-dev-server": "^4.13.2"
   },
   "dependencies": {
+    "@aws-amplify/ui-react": "^4.6.1",
+    "@fontsource/inter": "^4.5.15",
+    "aws-amplify": "^5.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
