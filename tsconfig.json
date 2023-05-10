@@ -13,7 +13,8 @@
     "jsx": "react-jsx",
     "isolatedModules":true,
     "module": "esnext",
-    "allowJs": true
+    "allowJs": true,
+    "experimentalDecorators": true
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "**/*.spec.ts"]

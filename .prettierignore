@@ -1,0 +1,5 @@
+src/graphql
+src/API.ts
+src/aws-exports.js
+*.css
+*.json
