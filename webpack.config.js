@@ -32,7 +32,7 @@ module.exports = {
         filename: 'bundle/bundle.js',
         chunkFilename: '[name].js',
     },
-    devtool: 'inline-source-map',
+    devtool: 'eval-source-map',
     devServer: {
         historyApiFallback: true,
         static: {

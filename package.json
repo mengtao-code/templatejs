@@ -42,15 +42,19 @@
     "webpack-dev-server": "^4.13.2"
   },
   "dependencies": {
-    "@aws-amplify/ui-react": "^4.6.1",
-    "@aws-crypto/client-browser": "^3.2.0",
-    "@fontsource/inter": "^4.5.15",
-    "@fontsource/material-icons": "^4.5.4",
-    "aws-amplify": "^5.2.0",
-    "dayjs": "^1.11.7",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.11.1"
+     "@aws-amplify/ui-react": "^4.6.1",
+        "@aws-crypto/client-browser": "^3.2.0",
+        "@fontsource/inter": "^4.5.15",
+        "@fontsource/material-icons": "^4.5.4",
+        "@lexical/react": "^0.10.0",
+        "aws-amplify": "^5.2.0",
+        "dayjs": "^1.11.7",
+        "html2canvas": "^1.4.1",
+        "lexical": "^0.10.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-router-dom": "^6.11.1",
+        "react-toastify": "^9.1.2"
   },
   "browserslist": [
     "defaults"
