@@ -1,21 +1,26 @@
 {
-  "compilerOptions": {
-    "baseUrl": "src",
-    "noImplicitAny": true,
-    "removeComments": true,
-    "preserveConstEnums": true,
-    "sourceMap": true,
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "moduleResolution": "node",
-    "target": "ESNext",
-    "strict": true,
-    "jsx": "react-jsx",
-    "isolatedModules":true,
-    "module": "esnext",
-    "allowJs": true,
-    "experimentalDecorators": true
-  },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "**/*.spec.ts"]
+    "compilerOptions": {
+        "baseUrl": "src",
+        "noImplicitAny": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "sourceMap": true,
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "moduleResolution": "node",
+        "target": "ESNext",
+        "strict": true,
+        "jsx": "react-jsx",
+        "isolatedModules": true,
+        "module": "esnext",
+        "allowJs": true,
+        "experimentalDecorators": true
+    },
+    "include": [
+        "src/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "**/*.spec.ts"
+    ]
 }

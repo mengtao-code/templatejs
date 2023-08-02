@@ -9,36 +9,36 @@ module.exports = {
             {
                 test: /\.(ts|js)x?$/,
                 exclude: /node_modules/,
-                loader: 'babel-loader',
+                loader: 'babel-loader'
             },
             {
                 test: /\.css$/i,
-                use: ["style-loader", "css-loader"],
+                use: ['style-loader', 'css-loader']
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
-                type: 'asset/resource',
-            },
-        ],
+                type: 'asset/resource'
+            }
+        ]
     },
     resolve: {
         extensions: ['.tsx', '.ts', '.js', '.jsx'],
-        modules: [path.resolve(__dirname, 'src'), 'node_modules'],
+        modules: [path.resolve(__dirname, 'src'), 'node_modules']
     },
     context: path.resolve(__dirname, './'),
     output: {
-        publicPath: "/",
+        publicPath: '/',
         path: path.resolve(__dirname, 'public'),
         filename: 'bundle/bundle.js',
-        chunkFilename: '[name].js',
+        chunkFilename: '[name].js'
     },
     devtool: 'eval-source-map',
     devServer: {
         historyApiFallback: true,
         static: {
-            directory: path.resolve(__dirname, './public'),
+            directory: path.resolve(__dirname, './public')
         },
         compress: true,
-        port: 9000,
-    },
+        port: 9000
+    }
 }
