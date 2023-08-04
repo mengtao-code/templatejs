@@ -46,7 +46,7 @@
         "@aws-crypto/client-browser": "^3.2.0",
         "@fontsource/material-icons": "^5.0.6",
         "@fontsource/roboto": "^5.0.7",
-        "aws-amplify": "^5.2.0",
+        "aws-amplify": "^5.3.6",
         "dayjs": "^1.11.7",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
