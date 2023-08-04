@@ -1,10 +1,10 @@
 # templatejs
 
-as a temporary start-up project like create-react-app.
+A simple start-up project like create-react-app.
 
-## how can you use templatejs?
+## How to use it?
 
-1. prepare required files
+1. Prepare required files
 
 ```shell
 ProjectName='hello-world'
@@ -16,11 +16,11 @@ cp templatejs ${ProjectName} -r
 
 ```
 
-2. initiate your project
+2. Initiate your project
 
 Now your new project's location is in "/tmp/hello-world". You need to change project name at package.json
 
-3. build and run
+3. Build and run
 
 ```shell
 cd /tmp/hello-world
@@ -28,4 +28,8 @@ npm install
 npm run serve
 ```
 
-4. Use your new project at "http://localhost:9000"
+4. Access your new project at "http://localhost:9000"
+
+## Fonts and Icons
+
+We use fontsource. Check [documents](https://fontsource.org/docs/getting-started/introduction) for details.
