@@ -43,9 +43,12 @@ const webpackConfigs = {
 
 if (process.env.MODE === 'development') {
     webpackConfigs.devtool = 'eval-source-map'
-    webpackConfigs.mode = 'development'
-} else if (process.env.MODE === 'production') {
-    webpackConfigs.mode = 'production'
 }
 
-module.exports = webpackConfigs
+if (process.env.MODE === 'production') {
+    webpackConfigs.mode = 'production'
+} else {
+    webpackConfigs.mode = 'development'
+}
+
+module.exports = webpackConfigs;
