@@ -36,8 +36,12 @@ We use fontsource. Check [documents](https://fontsource.org/docs/getting-started
 
 ## Environment Variables
 
-### NODE_MODE
+### MODE
 
 Default Value: development
 
-Optional Value: production
+Allowed Value: production
+
+### PUBLIC_PATH
+
+Default Value: /
