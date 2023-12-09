@@ -17,6 +17,10 @@ const webpackConfigs = {
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: 'asset/resource'
+            },
+            {
+                test: /\.json$/i,
+                type: 'json'
             }
         ]
     },
@@ -26,7 +30,6 @@ const webpackConfigs = {
     },
     context: path.resolve(__dirname, './'),
     output: {
-        publicPath: '/',
         path: path.resolve(__dirname, 'public'),
         filename: 'bundle/bundle.js',
         chunkFilename: '[name].js'
@@ -49,6 +52,12 @@ if (process.env.MODE === 'production') {
     webpackConfigs.mode = 'production'
 } else {
     webpackConfigs.mode = 'development'
+}
+
+if (process.env.PUBLIC_PATH) {
+    webpackConfigs.output.publicPath = process.env.PUBLIC_PATH
+} else {
+    webpackConfigs.output.publicPath = '/'
 }
 
 module.exports = webpackConfigs;

@@ -2,3 +2,5 @@ node_modules
 public/bundle
 coverage
 .idea
+public/*.woff
+public/*.woff2
