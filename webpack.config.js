@@ -1,9 +1,8 @@
 /* eslint-disable */
 const path = require('path')
 
-module.exports = {
+const webpackConfigs = {
     entry: './src/index.ts',
-    mode: 'development',
     module: {
         rules: [
             {
@@ -32,7 +31,6 @@ module.exports = {
         filename: 'bundle/bundle.js',
         chunkFilename: '[name].js'
     },
-    devtool: 'eval-source-map',
     devServer: {
         historyApiFallback: true,
         static: {
@@ -42,3 +40,12 @@ module.exports = {
         port: 9000
     }
 }
+
+if (process.env.MODE === 'development') {
+    webpackConfigs.devtool = 'eval-source-map'
+    webpackConfigs.mode = 'development'
+} else if (process.env.MODE === 'production') {
+    webpackConfigs.mode = 'production'
+}
+
+module.exports = webpackConfigs
