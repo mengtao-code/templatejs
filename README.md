@@ -7,7 +7,7 @@ A simple start-up project like create-react-app.
 #### 1. Prepare required files
 
 ```shell
-ProjectName='HelloWorld'
+ProjectName='helloworld'
 
 cd /tmp
 git clone https://github.com/mengtao-code/templatejs/
@@ -18,7 +18,7 @@ cp templatejs ${ProjectName} -r
 
 #### 2. Initiate your project
 
-Now your new project's location is in "/tmp/HelloWorld". You need to change project name at package.json
+Now your new project's location is in "/tmp/helloworld". You need to change project name at package.json
 
 #### 3. Build and run
 
@@ -38,10 +38,14 @@ We use fontsource. Check [documents](https://fontsource.org/docs/getting-started
 
 ### MODE
 
+Type: Enum
+
 Default Value: development
 
 Allowed Value: production
 
 ### PUBLIC_PATH
+
+Type: String
 
 Default Value: /
