@@ -42,7 +42,7 @@ Type: Enum
 
 Default Value: development
 
-Allowed Value: production
+Allowed Value: development, production
 
 ### PUBLIC_PATH
 
