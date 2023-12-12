@@ -1,7 +1,12 @@
 /* eslint-disable */
 const path = require('path')
 
-const webpackConfigs = {
+const MODE = process.env.MODE ?? 'development'
+const PUBLIC_PATH = process.env.PUBLIC_PATH ?? '/'
+const PATTERN = process.env.PATTERN ?? 'web'
+const PROJECT_NAME = process.env.PROJECT_NAME ?? 'myapp'
+
+const config = {
     entry: './src/index.ts',
     module: {
         rules: [
@@ -30,34 +35,47 @@ const webpackConfigs = {
     },
     context: path.resolve(__dirname, './'),
     output: {
-        path: path.resolve(__dirname, 'public'),
-        filename: 'bundle/bundle.js',
-        chunkFilename: '[name].js'
+        path: path.resolve(__dirname, 'dest'),
+        filename: 'index.js',
+        chunkFilename: '[name].js',
+        publicPath: PUBLIC_PATH
     },
     devServer: {
         historyApiFallback: true,
         static: {
-            directory: path.resolve(__dirname, './public')
+            directory: path.resolve(__dirname, './dest')
         },
         compress: true,
         port: 9000
     }
 }
 
-if (process.env.MODE === 'development') {
-    webpackConfigs.devtool = 'eval-source-map'
+if (MODE === 'development') {
+    config.devtool = 'eval-source-map'
 }
 
-if (process.env.MODE === 'production') {
-    webpackConfigs.mode = 'production'
-} else {
-    webpackConfigs.mode = 'development'
+if (MODE === 'production') {
+    config.mode = 'production'
+} else if (MODE === 'development') {
+    config.mode = 'development'
 }
 
-if (process.env.PUBLIC_PATH) {
-    webpackConfigs.output.publicPath = process.env.PUBLIC_PATH
-} else {
-    webpackConfigs.output.publicPath = '/'
+if (PATTERN === 'library') {
+    config.module.rules[0].loader = 'ts-loader'
+    config.output.library = {
+        type: "umd",
+        name: PROJECT_NAME
+    }
+    config.external = {
+        react: 'react',
+        'react-dom': 'react-dom',
+        dayjs: 'dayjs',
+        'aws-amplify': 'aws-amplify',
+        '@fontsource/roboto': '@fontsource/roboto',
+        '@fontsource/material-icons': '@fontsource/material-icons',
+        '@aws-crypto/client-browser': '@aws-crypto/client-browser',
+        '@aws-amplify/ui-react': '@aws-amplify/ui-react'
+    }
 }
 
-module.exports = webpackConfigs;
+module.exports = config;

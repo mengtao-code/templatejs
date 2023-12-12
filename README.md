@@ -43,15 +43,35 @@ We use fontsource. Check [documents](https://fontsource.org/docs/getting-started
 
 ### MODE
 
+Type: Enum
+
 Default Value: development
 
-Allowed Value: production
+Allowed Value: development, production
 
 ### PUBLIC_PATH
 
+Type: String
+
 Default Value: /
 
-## Don't modify files from templatejs
+### PATTERN
+
+Type: Enum
+
+Default Value: web
+
+Allowed Value: web, library
+
+### PROJECT_NAME
+
+Type: String
+
+Default Value: myapp
+
+If PATTERN is library, this variable is required.
+
+## Don't modify files from templatejs except ...
 
 There are continuing updates on this project, so you can't modify file contents except that:
 
