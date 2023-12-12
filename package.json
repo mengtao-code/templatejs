@@ -1,7 +1,7 @@
 {
     "name": "templatejs",
-    "version": "2.0.0",
-    "description": "",
+    "version": "1.0.0",
+    "description": "templatejs",
     "private": true,
     "scripts": {
         "test": "jest src",

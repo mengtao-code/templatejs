@@ -4,3 +4,4 @@ coverage
 .idea
 public/*.woff
 public/*.woff2
+.DS_Store
