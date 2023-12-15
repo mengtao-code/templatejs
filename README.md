@@ -14,12 +14,21 @@ I dislike nextjs because I lose control of my project, so I create templatejs fo
 cd /tmp
 git clone https://github.com/mengtao-code/templatejs/
 mkdir myapp
-cp templatejs ${ProjectName} -r
+cp templatejs myapp -r
 ```
 
-### 2. Initiate your project
+### 2. Update files if myapp is library
 
-Now your new project's location is in "/tmp/myapp". You need to change project name at package.json
+```shell
+cd /tmp/myapp
+cp library-file/.eslintignore.library .eslintignore
+cp library-file/.npmignore.library .npmignore
+cp library-file/.npmrc.library .npmignore
+cp library-file/.prettierignore.library .prettierignore
+cp library-file/babel.config.js.library babel.config.js
+cp library-file/package.json.library package.json
+cp library-file/tsconfig.json.library tsconfig.json
+```
 
 ### 3. Build and run
 
@@ -29,7 +38,7 @@ npm install
 npm run serve
 ```
 
-#### 4. Access your new project at "http://localhost:9000"
+#### 4. Access new project at "http://localhost:9000"
 
 ## Upgrade
 
@@ -78,9 +87,6 @@ There are continuing updates on this project, so you can't modify file contents 
 * README.md, modify this document for new project
 * src/App.tsx, it's the entry of new project
 * dependencies in package.json
-* project name in package.json
-* project version in package.json
-* project description in package.json
-* project author in package.json
+* project base information (name, version, description, author) in package.json
 * src/myapp/**, all new files should be in there
-* jest.setup.js
+* test/jest.setup.js
