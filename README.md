@@ -70,7 +70,7 @@ Type: Enum
 
 Default Value: web
 
-Allowed Value: web, library
+Allowed Value: web, nodejs, library
 
 ### PROJECT_NAME
 

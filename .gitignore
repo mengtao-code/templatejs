@@ -1,7 +1,7 @@
 node_modules
-public/bundle
 coverage
 .idea
-public/*.woff
-public/*.woff2
+out/bundle
+out/*.woff
+out/*.woff2
 .DS_Store

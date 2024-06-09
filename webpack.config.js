@@ -35,7 +35,7 @@ const config = {
     },
     context: path.resolve(__dirname, './'),
     output: {
-        path: path.resolve(__dirname, 'dest'),
+        path: path.resolve(__dirname, 'out'),
         filename: 'index.js',
         chunkFilename: '[name].js',
         publicPath: PUBLIC_PATH
@@ -43,7 +43,7 @@ const config = {
     devServer: {
         historyApiFallback: true,
         static: {
-            directory: path.resolve(__dirname, './dest')
+            directory: path.resolve(__dirname, './out')
         },
         compress: true,
         port: 9000
