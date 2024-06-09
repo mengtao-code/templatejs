@@ -1,5 +1,6 @@
 /* eslint-disable */
 const path = require('path')
+const fs = require('fs')
 require('dotenv').config()
 
 let NODE_ENV = process.env.NODE_ENV ?? 'development'
@@ -79,9 +80,14 @@ if (PATTERN === 'library') {
     }
 }
 
+if (PATTERN === 'web') {
+    fs.copyFileSync(path.resolve(__dirname, 'out', 'index.html'), path.resolve(process.cwd(), 'out', 'index.html'))
+}
+
 if (PATTERN == 'web') {
     config.target = 'web'
 } else if (PATTERN == 'nodejs') {
     config.target = 'node'
 }
+
 module.exports = config
