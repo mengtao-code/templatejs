@@ -8,7 +8,11 @@
         "serve": "webpack serve",
         "build": "webpack build",
         "lint": "eslint src",
-        "format": "npx prettier --write src"
+        "format": "npx prettier --write src",
+        "express": "node out/index.js"
+    },
+    "publishConfig": {
+        "@mengtao-code:registry": "https://npm.pkg.github.com"
     },
     "author": "mengtaoxin",
     "license": "ISC",

@@ -1,15 +1,10 @@
 /* eslint-disable */
 const path = require('path')
 
-let MODE = process.env.MODE ?? 'development'
+let NODE_ENV = process.env.NODE_ENV ?? 'development'
 let PUBLIC_PATH = process.env.PUBLIC_PATH ?? '/'
 let PATTERN = process.env.PATTERN ?? 'web'
 let PROJECT_NAME = process.env.PROJECT_NAME ?? 'myapp'
-
-MODE = MODE.trim()
-PUBLIC_PATH = PUBLIC_PATH.trim()
-PATTERN = PATTERN.trim()
-PROJECT_NAME = PROJECT_NAME.trim()
 
 const config = {
     entry: './src/index.ts',
@@ -55,13 +50,13 @@ const config = {
     }
 }
 
-if (MODE === 'development') {
+if (NODE_ENV === 'development') {
     config.devtool = 'eval-source-map'
 }
 
-if (MODE === 'production') {
+if (NODE_ENV === 'production') {
     config.mode = 'production'
-} else if (MODE === 'development') {
+} else if (NODE_ENV === 'development') {
     config.mode = 'development'
 }
 

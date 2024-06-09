@@ -1,17 +1,12 @@
 {
   "compilerOptions": {
     "allowJs": true,
-    "allowSyntheticDefaultImports": true,
     "baseUrl": "src",
-    "esModuleInterop": true,
     "experimentalDecorators": true,
     "isolatedModules": true,
     "jsx": "react-jsx",
     "module": "esnext",
     "moduleResolution": "node",
-    "noImplicitAny": true,
-    "preserveConstEnums": true,
-    "removeComments": true,
     "resolveJsonModule": true,
     "sourceMap": true,
     "strict": true,
