@@ -81,6 +81,9 @@ if (PATTERN === 'library') {
 }
 
 if (PATTERN === 'web') {
+    if (!fs.existsSync(path.resolve(process.cwd(), 'out'))) {
+        fs.mkdirSync(path.resolve(process.cwd(), 'out'))
+    }
     fs.copyFileSync(path.resolve(__dirname, 'index.html'), path.resolve(process.cwd(), 'out', 'index.html'))
     if (!fs.existsSync(path.resolve(process.cwd(), 'out', '.nojekyll'))) {
         fs.writeFileSync(path.resolve(process.cwd(), 'out', '.nojekyll'), '')
