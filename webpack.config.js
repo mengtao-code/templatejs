@@ -1,10 +1,15 @@
 /* eslint-disable */
 const path = require('path')
 
-const MODE = process.env.MODE ?? 'development'
-const PUBLIC_PATH = process.env.PUBLIC_PATH ?? '/'
-const PATTERN = process.env.PATTERN ?? 'web'
-const PROJECT_NAME = process.env.PROJECT_NAME ?? 'myapp'
+let MODE = process.env.MODE ?? 'development'
+let PUBLIC_PATH = process.env.PUBLIC_PATH ?? '/'
+let PATTERN = process.env.PATTERN ?? 'web'
+let PROJECT_NAME = process.env.PROJECT_NAME ?? 'myapp'
+
+MODE = MODE.trim()
+PUBLIC_PATH = PUBLIC_PATH.trim()
+PATTERN = PATTERN.trim()
+PROJECT_NAME = PROJECT_NAME.trim()
 
 const config = {
     entry: './src/index.ts',
@@ -63,7 +68,7 @@ if (MODE === 'production') {
 if (PATTERN === 'library') {
     config.module.rules[0].loader = 'ts-loader'
     config.output.library = {
-        type: "umd",
+        type: 'umd',
         name: PROJECT_NAME
     }
     config.external = {
@@ -78,4 +83,9 @@ if (PATTERN === 'library') {
     }
 }
 
-module.exports = config;
+if (PATTERN == 'web') {
+    config.target = 'web'
+} else if (PATTERN == 'nodejs') {
+    config.target = 'node'
+}
+module.exports = config
