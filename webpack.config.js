@@ -9,7 +9,7 @@ let PATTERN = process.env.PATTERN ?? 'web'
 let PROJECT_NAME = process.env.PROJECT_NAME ?? 'myapp'
 
 const config = {
-    entry: './src/index.ts',
+    entry: path.resolve(process.cwd(), 'src/index.ts'),
     module: {
         rules: [
             {
@@ -35,7 +35,7 @@ const config = {
         extensions: ['.tsx', '.ts', '.js', '.jsx'],
         modules: [path.resolve(process.cwd(), 'src'), 'node_modules']
     },
-    context: path.resolve(process.cwd(), './'),
+    context: process.cwd(),
     output: {
         path: path.resolve(process.cwd(), 'out'),
         filename: 'index.js',
@@ -45,7 +45,7 @@ const config = {
     devServer: {
         historyApiFallback: true,
         static: {
-            directory: path.resolve(process.cwd(), './out')
+            directory: path.resolve(process.cwd(), 'out')
         },
         compress: true,
         port: 9000
