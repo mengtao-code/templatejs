@@ -33,11 +33,11 @@ const config = {
     },
     resolve: {
         extensions: ['.tsx', '.ts', '.js', '.jsx'],
-        modules: [path.resolve(__dirname, 'src'), 'node_modules']
+        modules: [path.resolve(process.cwd(), 'src'), 'node_modules']
     },
-    context: path.resolve(__dirname, './'),
+    context: path.resolve(process.cwd(), './'),
     output: {
-        path: path.resolve(__dirname, 'out'),
+        path: path.resolve(process.cwd(), 'out'),
         filename: 'index.js',
         chunkFilename: '[name].js',
         publicPath: PUBLIC_PATH
@@ -45,7 +45,7 @@ const config = {
     devServer: {
         historyApiFallback: true,
         static: {
-            directory: path.resolve(__dirname, './out')
+            directory: path.resolve(process.cwd(), './out')
         },
         compress: true,
         port: 9000
@@ -82,6 +82,9 @@ if (PATTERN === 'library') {
 
 if (PATTERN === 'web') {
     fs.copyFileSync(path.resolve(__dirname, 'index.html'), path.resolve(process.cwd(), 'out', 'index.html'))
+    if (!fs.existsSync(path.resolve(process.cwd(), 'out', '.nojekyll'))) {
+        fs.writeFileSync(path.resolve(process.cwd(), 'out', '.nojekyll'), '')
+    }
 }
 
 if (PATTERN == 'web') {
