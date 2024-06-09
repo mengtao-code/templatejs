@@ -8,3 +8,4 @@ prettier.config.js
 README.md
 tsconfig.json
 webpack.config.js
+.npmrc
