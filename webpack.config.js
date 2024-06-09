@@ -1,5 +1,6 @@
 /* eslint-disable */
 const path = require('path')
+require('dotenv').config()
 
 let NODE_ENV = process.env.NODE_ENV ?? 'development'
 let PUBLIC_PATH = process.env.PUBLIC_PATH ?? '/'

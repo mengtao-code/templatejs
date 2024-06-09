@@ -1,6 +1,6 @@
 {
     "name": "@mengtao-code/templatejs",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "templatejs",
     "private": false,
     "repository": "https://github.com/mengtao-code/templatejs.git",
@@ -53,6 +53,7 @@
         "@fontsource/roboto": "^5.0.0",
         "aws-amplify": "^6.0.0",
         "dayjs": "^1.0.0",
+        "dotenv": "^16.4.5",
         "react": "^18.0.0",
         "react-dom": "^18.0.0"
     },

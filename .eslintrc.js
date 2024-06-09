@@ -17,6 +17,7 @@ module.exports = {
         '@typescript-eslint/no-inferrable-types': 'warn',
         '@typescript-eslint/ban-ts-comment': 'warn',
         '@typescript-eslint/ban-types': 'warn',
+        '@typescript-eslint/no-var-requires': 'warn',
         'no-empty-pattern': 'warn',
         'prefer-const': 'warn',
         'no-empty': 'warn'
