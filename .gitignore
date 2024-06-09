@@ -4,4 +4,5 @@ coverage
 out/bundle
 out/*.woff
 out/*.woff2
+out/*.js
 .DS_Store
