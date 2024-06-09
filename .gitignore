@@ -1,8 +1,5 @@
 node_modules
 coverage
 .idea
-out/bundle
-out/*.woff
-out/*.woff2
-out/*.js
+out
 .DS_Store

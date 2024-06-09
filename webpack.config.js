@@ -81,7 +81,7 @@ if (PATTERN === 'library') {
 }
 
 if (PATTERN === 'web') {
-    fs.copyFileSync(path.resolve(__dirname, 'out', 'index.html'), path.resolve(process.cwd(), 'out', 'index.html'))
+    fs.copyFileSync(path.resolve(__dirname, 'index.html'), path.resolve(process.cwd(), 'out', 'index.html'))
 }
 
 if (PATTERN == 'web') {
