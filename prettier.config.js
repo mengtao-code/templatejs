@@ -7,5 +7,6 @@ module.exports = {
     tabWidth: 4,
     trailingComma: 'none',
     parser: 'typescript',
-    printWidth: 160
+    printWidth: 160,
+    singleAttributePerLine: true
 }
