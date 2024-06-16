@@ -1,21 +1,21 @@
 {
-  "compilerOptions": {
-    "baseUrl": "src",
-    "experimentalDecorators": true,
-    "isolatedModules": true,
-    "jsx": "react-jsx",
-    "module": "NodeNext",
-    "moduleResolution": "nodenext",
-    "resolveJsonModule": true,
-    "sourceMap": true,
-    "strict": true,
-    "target": "esnext"
-  },
-  "exclude": [
-    "node_modules",
-    "**/*.spec.ts"
-  ],
-  "include": [
-    "src/**/*"
-  ]
+    "compilerOptions": {
+        "baseUrl": "src",
+        "experimentalDecorators": true,
+        "isolatedModules": true,
+        "jsx": "react-jsx",
+        "module": "NodeNext",
+        "moduleResolution": "nodenext",
+        "resolveJsonModule": true,
+        "sourceMap": true,
+        "strict": true,
+        "target": "esnext"
+    },
+    "exclude": [
+        "node_modules",
+        "**/*.spec.ts"
+    ],
+    "include": [
+        "src/**/*"
+    ]
 }
