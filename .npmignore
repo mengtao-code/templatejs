@@ -1,10 +1,8 @@
 node_modules
 .DS_Store
 .github
-.prettierignore
 # jest.config.js
 # jest.setup.js
-# prettier.config.js
 README.md
 # tsconfig.json
 # webpack.config.js

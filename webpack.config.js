@@ -92,18 +92,6 @@ if (PATTERN === 'web') {
 
 if (PATTERN == 'web') {
     config.target = 'web'
-} else if (PATTERN == 'nodejs') {
-    config.target = 'node'
-}
-
-if (PATTERN == 'web') {
-} else if (PATTERN == 'nodejs') {
-    config.watch = true
-    config.watchOptions = {
-        aggregateTimeout: 200,
-        poll: 1000,
-        ignored: /node_modules/
-    }
 }
 
 module.exports = config
